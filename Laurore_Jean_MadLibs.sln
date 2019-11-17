@@ -1,25 +1,101 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laurore_Jean_MadLibs", "Laurore_Jean_MadLibs\Laurore_Jean_MadLibs.csproj", "{BDF616C8-6DB5-41AE-B5E6-08D406E01E66}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BDF616C8-6DB5-41AE-B5E6-08D406E01E66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BDF616C8-6DB5-41AE-B5E6-08D406E01E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BDF616C8-6DB5-41AE-B5E6-08D406E01E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BDF616C8-6DB5-41AE-B5E6-08D406E01E66}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {85163E72-A154-4E48-A9AC-F0DD49413505}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace Laurore_Jean_MadLibs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            This program will create a story for you.
+            Author: Jean Laurore
+            11-15-19
+            */
+
+            // Setting the background color & title
+            // Set up Console UI (CUI)
+            Console.Title = "MadLibs";
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.WriteLine("*****************************");
+            Console.WriteLine("**** Welcome to MadLibs! ****");
+            Console.WriteLine("*****************************");
+            Console.BackgroundColor = ConsoleColor.Black;
+
+            // wait for enter key to be pressed.
+            Console.WriteLine("\r\nPlease press Enter/Return to continue...");
+            Console.ReadLine();
+
+            
+            
+            // Define user input and variables:
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+
+
+            Console.Write("Enter an adjective: ");
+            string adOne = Console.ReadLine();
+
+
+            Console.Write("Enter a second adjective: ");
+            string adTwo = Console.ReadLine();
+
+
+            Console.Write("Enter a  third adjective: ");
+            string adThree = Console.ReadLine();
+
+
+            Console.Write("Enter a verb: ");
+            string verb = Console.ReadLine();
+
+
+            Console.Write("Enter a noun: ");
+            string noun = Console.ReadLine();
+
+
+            Console.Write("Enter another noun: ");
+            string nounOne = Console.ReadLine();
+
+
+            Console.Write("Enter an animal: ");
+            string animal = Console.ReadLine();
+
+
+            Console.Write("Enter a food: ");
+            string food = Console.ReadLine();
+
+
+            Console.Write("Enter a fruit: ");
+            string fruit = Console.ReadLine();
+
+
+            Console.Write("Enter a superhero: ");
+            string superhero = Console.ReadLine();
+
+
+            Console.Write("Enter a country: ");
+            string country = Console.ReadLine();
+
+
+            Console.Write("Enter a dessert: ");
+            string dessert = Console.ReadLine();
+
+
+            Console.Write("Enter a year: ");
+            string year = Console.ReadLine();
+
+
+            // The template for the story:
+
+            string story = $" This morning {name} woke up feeling {adOne}. " +
+                $"'It is going to be a {adTwo} day!' Outside, a bunch of {animal}s were protesting to keep {food} in stores. " +
+                $"They began to {verb} to the rhythm of the {noun}, which made all the {fruit}s very {adThree}. " +
+                $"Concerned, {name} texted {superhero}, who flew {name} to {country} and dropped {name} in a puddle of frozen {dessert}. " +
+                $"{name} woke up in the year {year}, in a world where {nounOne}s ruled the world.";
+
+
+            // Print the story:
+            Console.WriteLine(story);
+        }
+    }
+}
